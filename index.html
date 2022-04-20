@@ -920,7 +920,7 @@ console.log(ev);
 
 
 
-      if (e.features.length > 0) {
+     if (e.features.length > 0) {
       var feature = e.features[0];
       var country_id = feature.properties.iso2;
       var iso2 = feature.properties.iso2;
@@ -928,10 +928,10 @@ console.log(ev);
       // map.setFilter('pop_2015_points_1khighlighted', ['==', 'country_iso2', country_id ]);
       $('#country_name').empty().append("<div id='country_name_'> <p> "+feature.properties.country_name+"</p></div> "+
       "<div id = 'country_pop_main' class = 'card_custom'><div id='country_pop_title' class = 'section_out_title'> <p>Inhabitants (2015)</p> </div><div id='country_popx' class = 'section_out_number'> <p> "+country_pop_2015.toLocaleString()+" People </p> </div></div>"+
-      "<div id = 'country_pop_main' class = 'card_custom'><div id='country_pop_title' class = 'section_out_title'> <p>Rate of Pop Change (2010-2015)</p> </div><div id='country_popx' class = 'section_out_number'> <p> "+Math.round(feature.properties.country_pop_change_per*10)/10+" % </p> </div></div>"+
+      "<div id = 'country_pop_main' class = 'card_custom'><div id='country_pop_title' class = 'section_out_title'> <p>Population density </p> </div><div id='country_popx' class = 'section_out_number'> <p> "+Math.round(feature.properties.country_pop_den_2015*10)/10+" per Km2 </p> </div></div>"+
       "<div id='district_name_'> <p> "+feature.properties.district_name+"</p></div> "+
       "<div id = 'district_pop_main' class = 'card_custom'><div id='country_pop_title' class = 'section_out_title'> <p>Inhabitants (2015)</p> </div><div id='district_popx' class = 'section_out_number'> <p> "+feature.properties.district_pop_2015.toLocaleString()+" People </p> </div></div>"+
-      "<div id = 'district_pop_main' class = 'card_custom'><div id='country_pop_title' class = 'section_out_title'> <p>Rate of Pop Change (2010-2015)</p> </div><div id='district_popx' class = 'section_out_number'> <p> "+Math.round(feature.properties.district_pop_chage_perc*10)/10+" % </p> </div></div>"+
+      "<div id = 'district_pop_main' class = 'card_custom'><div id='country_pop_title' class = 'section_out_title'> <p>Population density </p> </div><div id='district_popx' class = 'section_out_number'> <p> "+Math.round(feature.properties.district_pop_den_2015*10)/10+" per Km2</p> </div></div>"+
       "<div id = 'dddd'><div id = 'btn_maps'><button type='button' class='btn btn-primary draw_rec_custom'><i class='far fa-square'></i></button><button type='button' class='btn btn-primary draw_custom'><i class='fas fa-draw-polygon'></i></button><button type='button' class='btn btn-secondary clean_custom'><i class='fas fa-trash-alt'></i></button><button type='button' class='btn btn-secondary zoom_custom'><i class='fas fa-globe'></i></button><button  onClick='window.location.reload()' type='button' class='btn btn-secondary reload_custom'><i class='fas fa-sync-alt'></i></button></div>");
 
       if($('.sidebar').css('display') == 'none')
